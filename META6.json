@@ -1,0 +1,20 @@
+{
+  "name": "hello",
+  "source-url": "https://github.com/tommystanton/hello-world-cro-pm6.git",
+  "perl": "6.*",
+  "resources": [],
+  "build-depends": [],
+  "depends": [
+    "Cro::HTTP"
+  ],
+  "tags": [
+    ""
+  ],
+  "license": "Artistic-2.0",
+  "test-depends": [],
+  "version": "1.0",
+  "meta-version": "0",
+  "authors": [
+    "github:tommystanton"
+  ]
+}
