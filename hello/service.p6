@@ -1,12 +1,10 @@
-use Cro::HTTP::Router;
 use Cro::HTTP::Server;
 
-my $application = route {
-    get -> 'hello' { content 'text/plain', 'Hello world!' }
-    get -> 'greet', :$name! { content 'text/plain', "Hello $name!" }
-};
+use Routes;
 
-my $service = Cro::HTTP::Server.new(:$application, :port<8080>);
+my $service = Cro::HTTP::Server.new:
+    application => routes(),
+    port => 8080;
 
 $service.start;
 
