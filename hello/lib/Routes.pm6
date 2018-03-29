@@ -6,8 +6,8 @@ sub routes() is export {
         get -> 'greet', :$name! { content 'text/plain', "Hello $name!" }
 
         post -> 'greet' {
-            request-body -> %attr {
-                content 'text/plain', "We see you, %attr<name>. ;-)";
+            request-body -> (:$name!) {
+                content 'text/plain', "We see you, $name. ;-)";
             }
         }
     }
